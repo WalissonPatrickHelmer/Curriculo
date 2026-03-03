@@ -10,6 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos de Hover Adicionais para Destaque */
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        /* Efeito de Hover WhatsApp */
+        .contact-card.whatsapp:hover {
+            background-color: #25D366 !important;
+            color: white !important;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+            transform: translateY(-5px);
+        }
+        /* Efeito de Hover Email */
+        .contact-card.email:hover {
+            background-color: #EA4335 !important;
+            color: white !important;
+            box-shadow: 0 10px 20px rgba(234, 67, 53, 0.4);
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
 
@@ -30,10 +50,13 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container">
-            <span class="badge">SISTEMAS & TECNOLOGIA</span>
+            <span class="badge">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</span>
             <h1>Walisson Patrick Helmer</h1>
-            <p>Transicionando uma carreira de liderança executiva para o desenvolvimento de software. Focado em criar eficiência através de <strong>Python, Dados e Automação</strong>.</p>
-            <div class="hero-btns">
+            <p>Estudante de ADS e especialista em gestão. Focado em transição para <strong>Desenvolvimento de Software e Suporte em TI</strong>.</p>
+            <div class="hero-btns" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.linkedin.com/in/walissonpatrickhelmer/" target="_blank" class="btn-secondary" style="background: #0077b5; color: white; border: none;">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
                 <a href="https://drive.google.com/file/d/1873DnrIIadZ7PzL_2kNJ9v1WkpZ-6yc1/view?usp=drive_link" target="_blank" class="btn-primary">
                     <i class="fas fa-download"></i> Baixar Currículo
                 </a>
@@ -52,44 +75,97 @@
                 <h2>OBJETIVO PROFISSIONAL</h2>
             </div>
             <div class="about-text">
-                <p>Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, com experiência prévia em gestão de equipes, atendimento ao cliente e suporte técnico.</p>
+                <p>Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, com experiência em gestão de empresas e equipes, atendimento ao cliente, suporte técnico e vendas.</p>
                 <blockquote class="quote">
                     "Busco oportunidade de estágio nas áreas de Desenvolvimento de Sistemas ou Suporte em TI, com foco em aplicar meus conhecimentos técnicos, aprimorar minhas habilidades práticas e contribuir para a criação de soluções eficientes, colaborando com times multidisciplinares e agregando valor ao negócio."
                 </blockquote>
             </div>
             <div class="info-grid">
-                <div class="info-item"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</div>
+                <div class="info-item"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG (Lindeia)</div>
                 <div class="info-item"><i class="fas fa-check-circle"></i> Disponível para Estágio</div>
                 <div class="info-item"><i class="fas fa-code"></i> ADS @ Impacta</div>
             </div>
         </div>
     </section>
 
+    <!-- Formação Acadêmica -->
+    <section id="formacao" class="section">
+        <div class="container small">
+            <div class="section-title">
+                <i class="fas fa-graduation-cap text-emerald"></i>
+                <h2>FORMAÇÃO ACADÊMICA</h2>
+            </div>
+            <div class="edu-card" style="margin-bottom: 2rem;">
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <p>Faculdade Impacta | Conclusão prevista: Dezembro/2027</p>
+            </div>
+            <div class="edu-card">
+                <h3>Técnico em Programação e Jogos Digitais</h3>
+                <p>Formação Profissionalizante | 1200h</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Habilidades -->
-    <section id="habilidades" class="section">
+    <section id="habilidades" class="section-dark">
         <div class="container">
-            <h2 class="text-center">COMPETÊNCIAS TÉCNICAS</h2>
+            <h2 class="text-center">HABILIDADES TÉCNICAS</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fas fa-code"></i>
-                    <h3>Linguagens</h3>
+                    <h3>Linguagens & Web</h3>
                     <div class="tags">
-                        <span>Python</span><span>HTML5</span><span>CSS3</span><span>SQL</span>
+                        <span>Python</span><span>HTML5</span><span>CSS3</span><span>SQL</span><span>Dreamweaver</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-database"></i>
                     <h3>Sistemas & Dados</h3>
                     <div class="tags">
-                        <span>Neo4j</span><span>Power BI</span><span>N8N</span><span>Excel</span>
+                        <span>Neo4j</span><span>Banco de Dados</span><span>Excel</span><span>Power BI</span><span>N8N</span>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>IA</h3>
+                    <i class="fas fa-microchip"></i>
+                    <h3>Hardware & Suporte</h3>
                     <div class="tags">
-                        <span>Eng. de Prompt</span><span>IA Generativa</span>
+                        <span>Montagem de PCs</span><span>Manutenção</span><span>Suporte Técnico</span>
                     </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Design & IA</h3>
+                    <div class="tags">
+                        <span>Photoshop</span><span>CorelDraw</span><span>Engenharia de Prompt</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Gestão & Vendas</h3>
+                    <div class="tags">
+                        <span>Equipes</span><span>Vendas</span><span>Redes Sociais</span><span>Atendimento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos e Certificações -->
+    <section id="certificacoes" class="section">
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-certificate text-emerald"></i>
+                <h2>CURSOS E CERTIFICAÇÕES</h2>
+            </div>
+            <div class="certs-list">
+                <div class="cert-item" style="line-height: 2.2;">
+                    <p><strong>Embaixadores Universitários da DIO</strong></p>
+                    <p><strong>Automação com N8N básico</strong> – 26h</p>
+                    <p><strong>Inteligência Artificial</strong> – 40h (Ênfase em Engenharia de Prompt)</p>
+                    <p><strong>Jornada IA</strong> – Hashtag Treinamentos (8h) | <strong>Imersão em IA</strong> – Gran Faculdade (10h)</p>
+                    <p><strong>HTML5 e CSS3</strong> – Curso em Vídeo (200h) | <strong>Web Design</strong> (102h)</p>
+                    <p><strong>Design de Web: Introdução</strong> – Microsoft/SENAC (84h)</p>
+                    <p><strong>Hardware e Manutenção</strong> (96h) | <strong>Consultor de Vendas</strong> (80h)</p>
                 </div>
             </div>
         </div>
@@ -100,7 +176,7 @@
         <div class="container small">
             <div class="section-title">
                 <i class="fas fa-briefcase text-emerald"></i>
-                <h2>TRAJETÓRIA PROFISSIONAL</h2>
+                <h2>EXPERIÊNCIA PROFISSIONAL</h2>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
@@ -108,8 +184,8 @@
                         <h3>2P Sacolas Personalizadas</h3>
                         <span>Atual</span>
                     </div>
-                    <p class="role">CEO / Administrador</p>
-                    <p class="desc">Liderança estratégica com foco em gestão de redes sociais, vendas, pós-vendas e coordenação de equipes.</p>
+                    <p class="role">CEO / Administrador / Logística / Compras</p>
+                    <p class="desc">Gestão de redes sociais, vendas, equipe e treinamentos. Controle financeiro, compras e estoque.</p>
                 </div>
                 <div class="timeline-item">
                     <div class="time-header">
@@ -117,7 +193,23 @@
                         <span>Anterior</span>
                     </div>
                     <p class="role">Telemarketing e Suporte TI</p>
-                    <p class="desc">Atendimento técnico especializado ao cliente e suporte de primeiro nível em infraestrutura de TI.</p>
+                    <p class="desc">Atendimento técnico e suporte de primeiro nível em infraestrutura.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-header">
+                        <h3>Monticeli Buzzo “Chame o Gênio”</h3>
+                        <span>Anterior</span>
+                    </div>
+                    <p class="role">Atendimento Pós-Venda e Suporte TI</p>
+                    <p class="desc">Suporte técnico em produtos eletrônicos e atendimento ao cliente pré/pós-venda.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-header">
+                        <h3>Carrefour S.A.</h3>
+                        <span>Anterior</span>
+                    </div>
+                    <p class="role">Vendedor</p>
+                    <p class="desc">Vendas, pós-vendas e controle de estoque.</p>
                 </div>
             </div>
         </div>
@@ -126,13 +218,13 @@
     <!-- Rodapé -->
     <footer id="contato">
         <div class="container text-center">
-            <h2>Vamos conversar?</h2>
-            <p class="location">Belo Horizonte, MG • Lindéia</p>
+            <h2>Interessado no meu perfil?</h2>
+            <p class="location">Belo Horizonte, MG • Lindeia • CEP: 30690-260</p>
             <div class="contact-links">
-                <a href="https://wa.me/5531993736336" target="_blank" class="contact-card">
+                <a href="https://wa.me/5531993736336" target="_blank" class="contact-card whatsapp">
                     <i class="fab fa-whatsapp"></i> (31) 99373-6336
                 </a>
-                <a href="mailto:wpatrickhelmer@gmail.com" class="contact-card">
+                <a href="mailto:wpatrickhelmer@gmail.com" class="contact-card email">
                     <i class="far fa-envelope"></i> wpatrickhelmer@gmail.com
                 </a>
             </div>
