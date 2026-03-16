@@ -1,35 +1,62 @@
-# 🚀 Portfólio Profissional - Walisson Patrick Helmer
+# 💻 Portfólio Profissional - Walisson Patrick Helmer
 
-Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minha trajetória acadêmica em **Análise e Desenvolvimento de Sistemas**, minhas habilidades técnicas e experiências profissionais.
+Este repositório contém o código-fonte do meu portfólio online. O projeto foi desenvolvido para apresentar minha trajetória acadêmica, habilidades técnicas e projetos práticos de forma responsiva e moderna.
 
-O projeto está disponível online em: https://walissonpatrickhelmer.github.io/curriculo/
+🚀 **Acesse o site:** [https://walissonpatrickhelmer.github.io/curriculo](https://walissonpatrickhelmer.github.io/curriculo)
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-
-O projeto foi construído utilizando tecnologias web fundamentais, focando em performance, responsividade e clean code:
-
-* **HTML5:** Estruturação semântica do conteúdo.
-* **CSS3:** Estilização moderna com uso de **Variáveis CSS** (Custom Properties) para gerenciamento de temas.
-* **JavaScript (Vanilla):** Lógica para troca de idiomas (i18n) e alternância entre Dark/Light Mode.
-* **Font Awesome:** Biblioteca de ícones para interface.
-* **Google Fonts:** Tipografia otimizada (Fonte Inter).
+* **HTML5:** Estrutura semântica.
+* **CSS3:** Estilização avançada com Flexbox, Grid e variáveis de tema.
+* **JavaScript:** Lógica para alternância de idiomas (PT/EN) e modo escuro/claro.
+* **FontAwesome:** Ícones interativos.
 
 ---
 
-## ✨ Funcionalidades
+## 📸 Demonstração do Projeto
 
-- [x] **Design Responsivo:** Adaptado para dispositivos móveis, tablets e desktops.
-- [x] **Dark/Light Mode:** Alternância de tema com persistência visual.
-- [x] **Suporte Multi-idioma:** Interface disponível em Português (PT) e Inglês (EN).
-- [x] **Navegação Suave:** Scroll suave entre as seções do site.
+### 1. Walisson Patrick Helmer (Hero)
+Seção inicial com foco no meu nome, badge de ADS, cargo atual e botões de ação para LinkedIn, GitHub e Currículo.
+![Walisson Patrick Helmer](./img/img1.png)
+
+### 2. Objetivo Profissional
+Resumo sobre minha transição de carreira e metas profissionais para as áreas de TI e Desenvolvimento.
+![Objetivo Profissional](./img/img2.png)
+
+### 3. Formação Acadêmica (Graduação)
+Destaque centralizado para o curso superior de Análise e Desenvolvimento de Sistemas.
+![Formação Acadêmica ADS](./img/img3.png)
+
+### 4. Formação Acadêmica (Técnico)
+Detalhes da formação técnica profissionalizante com carga horária de 1200h.
+![Formação Técnica](./img/img4.png)
+
+### 5. Habilidades Técnicas
+Grid de competências técnicas separadas por categorias: Linguagens, Dados, Design/IA e Gestão.
+![Habilidades Técnicas](./img/img5.png)
+
+### 6. Meus Projetos
+Vitrine interativa apresentando 8 projetos reais com layout de 4 colunas e botões de acesso direto.
+![Meus Projetos](./img/img6.png)
+
+### 7. Experiência Profissional
+Linha do tempo detalhando minha atuação profissional prévia e atual.
+![Experiência Profissional](./img/img7.png)
 
 ---
 
-## 📁 Estrutura de Arquivos
+## 💡 Funcionalidades de Destaque
+- **Dark/Light Mode:** Interface adaptável à preferência de leitura do usuário.
+- **Internacionalização:** Suporte para Português e Inglês via JavaScript.
+- **Responsividade:** Layout totalmente adaptado para Celulares, Tablets e PCs.
 
-```text
-├── index.html    # Estrutura principal
-├── style.css     # Estilização e variáveis de tema
-└── script.js    # Lógica de tradução e troca de tema
+---
+
+## 📬 Contato
+- **LinkedIn:** [walissonpatrickhelmer](https://www.linkedin.com/in/walissonpatrickhelmer/)
+- **Email:** wpatrickhelmer@gmail.com
+- **WhatsApp:** (31) 99373-6336
+
+---
+Desenvolvido por Walisson Patrick Helmer.
