@@ -4,216 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walisson Patrick Helmer | Portfólio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
-
-    <div class="theme-controls">
-        <button class="control-btn" id="theme-toggle" title="Mudar Tema">
-            <i class="fas fa-sun"></i>
-        </button>
-        <button class="control-btn" id="lang-toggle" title="Mudar Idioma">EN</button>
-    </div>
+<body class="dark-mode">
 
     <nav id="navbar">
         <div class="container nav-content">
-            <div class="logo">WPH<span>.</span></div>
+            <div class="logo"><span>.</span></div>
             <ul class="nav-links">
-                <li><a href="#sobre" data-key="nav-about">Sobre</a></li>
-                <li><a href="#formacao" data-key="nav-edu">Formação</a></li>
-                <li><a href="#habilidades" data-key="nav-skills">Habilidades</a></li>
-                <li><a href="#meus-projetos" data-key="nav-projects">Projetos</a></li>
-                <li><a href="#experiencia" data-key="nav-career">Carreira</a></li>
-                <li><a href="#contato" data-key="nav-contact-menu">Contato</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Objetivo</a></li>
+                <li><a href="#edu">Formação</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><button id="theme-toggle" class="btn-theme"><i class="fas fa-moon"></i></button></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <span class="badge" data-key="hero-badge">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</span>
-            <h1 data-key="hero-title">Walisson Patrick Helmer</h1>
-            <p data-key="hero-desc">Estudante de ADS e especialista em gestão. Focado em transição para Desenvolvimento de Software e Suporte em TI.</p>
-            <div class="hero-btns" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://www.linkedin.com/in/walissonpatrickhelmer/" target="_blank" class="btn-secondary" style="background: #0077b5; color: white; border: none;">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://drive.google.com/file/d/1873DnrIIadZ7PzL_2kNJ9v1WkpZ-6yc1/view?usp=drive_link" target="_blank" class="btn-primary" style="color: white;">
-                    <i class="fas fa-download"></i> <span data-key="btn-cv">Baixar Currículo</span>
-                </a>
-                <a href="https://github.com/WalissonPatrickHelmer" target="_blank" class="btn-secondary btn-github">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+    <header id="home" class="hero">
+        <div class="container text-center">
+            <h1>Walisson Patrick Helmer</h1>
+            <p class="hero-subtitle">Estudante de ADS e especialista em gestão. Focado em transição para Desenvolvimento de Software e Suporte em TI.</p>
+            <div class="hero-btns">
+                <a href="https://linkedin.com" target="_blank" class="btn-hero"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="btn-hero highlight"><i class="fas fa-file-download"></i> Baixar Currículo</a>
+                <a href="https://github.com/walissonpatrickhelmer" target="_blank" class="btn-hero"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
     </header>
 
-    <section id="sobre" class="section-dark">
-        <div class="container small">
-            <div class="section-title">
-                <i class="fas fa-user text-emerald"></i>
-                <h2 data-key="obj-title">OBJETIVO PROFISSIONAL</h2>
+    <section id="about">
+        <div class="container">
+            <div class="section-title justify-center">
+                <h2>OBJETIVO PROFISSIONAL</h2><br>
             </div>
-            <div class="about-text">
-                <p data-key="obj-desc-p">Estudante de Análise e Desenvolvimento de Sistemas, com experiência em gestão de empresas e equipes, atendimento ao cliente, suporte técnico e vendas.</p>
-                <blockquote class="quote" data-key="obj-quote">
+            <div class="objective-card">
+                <p>Estudante de Análise e Desenvolvimento de Sistemas, com experiência em gestão de empresas e equipes, atendimento ao cliente, suporte técnico e vendas.</p>
+                <blockquote class="quote">
                     "Busco oportunidade de estágio nas áreas de Desenvolvimento de Sistemas ou Suporte em TI, com foco em aplicar meus conhecimentos técnicos, aprimorar minhas habilidades práticas e contribuir para a criação de soluções eficientes."
                 </blockquote>
             </div>
         </div>
     </section>
 
-    <section id="formacao">
-        <div class="container small text-center">
+    <section id="edu" class="section-dark">
+        <div class="container">
             <div class="section-title justify-center">
-                <i class="fas fa-graduation-cap text-emerald"></i>
-                <h2 data-key="edu-title">FORMAÇÃO ACADÊMICA</h2>
+                <i class="fas fa-graduation-cap"></i>
+                <h2>FORMAÇÃO ACADÊMICA</h2><br>
             </div>
-            
             <div class="edu-wrapper">
-                <div class="edu-card-highlight">
-                    <h3 data-key="edu-1-h">Análise e Desenvolvimento de Sistemas</h3>
+                <div class="edu-item">
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
                     <p class="school">Faculdade Impacta</p>
-                    <span class="date" data-key="edu-1-p">Conclusão prevista: Dezembro/2027</span>
+                    <p>Conclusão prevista: Dezembro/2027</p>
                 </div>
-
-                <div class="edu-card-highlight">
-                    <h3 data-key="edu-2-h">Técnico em Programação e Jogos Digitais</h3>
+                <div class="edu-item">
+                    <h3>Técnico em Programação e Jogos Digitais</h3>
                     <p class="school">Formação Profissionalizante</p>
-                    <span class="date" data-key="edu-2-p">Formação Profissionalizante | 1200h</span>
+                    <p>Carga Horária: 1200h</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="habilidades" class="section-dark">
+    <section id="experience">
         <div class="container">
-            <h2 class="text-center" data-key="skills-title">HABILIDADES TÉCNICAS</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code text-emerald"></i>
-                    <h3 data-key="skill-1">Linguagens & Web</h3>
-                    <div class="tags">
-                        <span>Python</span><span>HTML5</span><span>CSS3</span><span>SQL</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database text-emerald"></i>
-                    <h3 data-key="skill-2">Sistemas & Dados</h3>
-                    <div class="tags">
-                        <span>Neo4j</span><span>Banco de Dados</span><span>Excel</span><span>Power BI</span><span>N8N</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-paint-brush text-emerald"></i>
-                    <h3 data-key="skill-4">Design & IA</h3>
-                    <div class="tags">
-                        <span>Photoshop</span><span>CorelDraw</span><span>IA</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-users text-emerald"></i>
-                    <h3 data-key="skill-5">Gestão & Vendas</h3>
-                    <div class="tags">
-                        <span>Liderança</span><span>Vendas</span><span>Atendimento</span>
-                    </div>
-                </div>
+            <div class="section-title justify-center">
+                <h2>EXPERIÊNCIA PROFISSIONAL</h2><br>
             </div>
-        </div>
-    </section>
-
-    <section id="meus-projetos">
-        <div class="container">
-            <div class="section-title">
-                <i class="fas fa-code-branch text-emerald"></i>
-                <h2 data-key="proj-title">MEUS PROJETOS</h2>
-            </div>
-            <div class="skills-grid"> 
-                <div class="skill-card">
-                    <h3 data-key="proj-1-h">Moto MC</h3>
-                    <p data-key="proj-1-p">Oficina e Estética de Motos</p>
-                    <a href="https://walissonpatrickhelmer.github.io/moto_mc/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-2-h">Jogo da Velha</h3>
-                    <p data-key="proj-2-p">Interativo com Lógica JS</p>
-                    <a href="https://walissonpatrickhelmer.github.io/Velha-interativo/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-3-h">Cafeteria</h3>
-                    <p data-key="proj-3-p">Design UI para Cafés</p>
-                    <a href="https://walissonpatrickhelmer.github.io/Cafeteria/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-4-h">Academia</h3>
-                    <p data-key="proj-4-p">Site de Serviços Fitness</p>
-                    <a href="https://walissonpatrickhelmer.github.io/Academia/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-5-h">10 Curiosidades Eddie</h3>
-                    <p data-key="proj-5-p">Página Temática Iron Maiden</p>
-                    <a href="https://walissonpatrickhelmer.github.io/10-curiosidades-sobre-eddie/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-6-h">História do Android</h3>
-                    <p data-key="proj-6-p">Evolução do Sistema Mobile</p>
-                    <a href="https://walissonpatrickhelmer.github.io/Site_Historia_android/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-7-h">HTML com Guanabara</h3>
-                    <p data-key="proj-7-p">Estudos de Base e Semântica</p>
-                    <a href="https://walissonpatrickhelmer.github.io/Html_com_guanabara/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-                <div class="skill-card">
-                    <h3 data-key="proj-8-h">Web Currículo</h3>
-                    <p data-key="proj-8-p">Primeira versão digital</p>
-                    <a href="https://walissonpatrickhelmer.github.io/curriculo/" target="_blank" class="btn-project">Acessar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia" class="section-dark">
-        <div class="container small">
-            <div class="section-title">
-                <i class="fas fa-briefcase text-emerald"></i>
-                <h2 data-key="exp-title">EXPERIÊNCIA PROFISSIONAL</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item no-box">
-                    <div class="time-header">
+            <div class="exp-grid">
+                <div class="exp-card">
+                    <div class="exp-header">
                         <h3>2P Sacolas Personalizadas</h3>
-                        <span data-key="exp-now" style="color: var(--emerald); font-weight: 700;"></span>
+                        <span>Vendas / Administração / Logística / Compras</span>
                     </div>
-                    <p class="role" style="font-weight: 700;" data-key="exp-1-role">Vendas / Administração / Logística / Compras</p>
-                    <p class="desc" data-key="exp-1-desc">Gestão de redes sociais, vendas, equipe e treinamentos. Controle financeiro e compras.</p>
+                    <p>Gestão de redes sociais, vendas, equipe e treinamentos. Controle financeiro e compras.</p>
                 </div>
-                <div class="timeline-item no-box">
-                    <div class="time-header">
+                <div class="exp-card">
+                    <div class="exp-header">
                         <h3>Alma Viva do Brasil</h3>
-                        <span data-key="exp-prev" data-key="exp-label-prev"></span>
+                        <span>Telemarketing e Suporte TI</span>
                     </div>
-                    <p class="role" style="font-weight: 700;" data-key="exp-2-role">Telemarketing e Suporte TI</p>
-                    <p class="desc" data-key="exp-2-desc">Atendimento técnico e suporte de primeiro nível em infraestrutura.</p>
+                    <p>Atendimento técnico e suporte de primeiro nível em infraestrutura.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contato">
+    <section id="skills" class="section-dark">
+        <div class="container">
+            <div class="section-title justify-center">
+                <h2>HABILIDADES TÉCNICAS</h2><br>
+            </div>
+            <div class="skills-grid-2x2">
+                <div class="skill-box">
+                    <div class="skill-header"><i class="fas fa-code"></i> Linguagens & Web</div>
+                    <div class="tags"><span>Python</span><span>HTML5</span><span>CSS3</span><span>SQL</span></div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header"><i class="fas fa-database"></i> Sistemas & Dados</div>
+                    <div class="tags"><span>Neo4j</span><span>Excel</span><span>Power BI</span><span>N8N</span></div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header"><i class="fas fa-paint-brush"></i> Design & IA</div>
+                    <div class="tags"><span>Photoshop</span><span>CorelDraw</span><span>IA</span></div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header"><i class="fas fa-users"></i> Gestão & Vendas</div>
+                    <div class="tags"><span>Liderança</span><span>Vendas</span><span>Atendimento</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-title justify-center">
+                <i class="fas fa-code-branch"></i>
+                <h2>MEUS PROJETOS</h2><br>
+            </div>
+            <div class="projects-grid-layout">
+                <div class="project-card"><h3>Moto MC</h3><p>Oficina e Estética</p><a href="#" class="btn-project">Acessar</a></div>
+                <div class="project-card"><h3>Jogo da Velha</h3><p>Lógica em JS</p><a href="#" class="btn-project">Acessar</a></div>
+                <div class="project-card"><h3>Cafeteria</h3><p>Design UI</p><a href="#" class="btn-project">Acessar</a></div>
+                <div class="project-card"><h3>Academia</h3><p>Fitness</p><a href="#" class="btn-project">Acessar</a></div>
+                <div class="project-card"><h3>10 Curiosidades Eddie</h3><p>Iron Maiden</p><a href="https://walissonpatrickhelmer.github.io/10-curiosidades-sobre-eddie/" target="_blank" class="btn-project">Acessar</a></div>
+                <div class="project-card"><h3>História do Android</h3><p>Evolução Mobile</p><a href="https://walissonpatrickhelmer.github.io/Site_Historia_android/" target="_blank" class="btn-project">Acessar</a></div>
+                <div class="project-card"><h3>HTML com Guanabara</h3><p>Estudos Base</p><a href="https://walissonpatrickhelmer.github.io/Html_com_guanabara/" target="_blank" class="btn-project">Acessar</a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
         <div class="container text-center">
-            <h2 data-key="foot-h2">Interessado no meu perfil?</h2>
-            <div class="contact-links">
-                <a href="https://wa.me/5531993736336" target="_blank" class="contact-card whatsapp">
+            <h2 class="footer-title">Interessado no meu perfil?</h2><br>
+            <div class="contact-btns-wrapper">
+                <a href="https://wa.me/5531993736336" target="_blank" class="btn-contact btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> (31) 99373-6336
                 </a>
-                <a href="mailto:wpatrickhelmer@gmail.com" class="contact-card email">
+                <a href="mailto:wpatrickhelmer@gmail.com" class="btn-contact btn-email">
                     <i class="far fa-envelope"></i> wpatrickhelmer@gmail.com
                 </a>
             </div>
-            <p class="location" data-key="foot-loc">Belo Horizonte, MG • CEP: 30690-260</p>
+            <p class="copyright">&copy; 2026 Walisson Patrick Helmer.</p>
         </div>
     </footer>
 
