@@ -24,6 +24,7 @@
                 <li><a href="#sobre" data-key="nav-about">Sobre</a></li>
                 <li><a href="#formacao" data-key="nav-edu">Formação</a></li>
                 <li><a href="#habilidades" data-key="nav-skills">Habilidades</a></li>
+                <li><a href="#meus-projetos" data-key="nav-projects">Projetos</a></li>
                 <li><a href="#experiencia" data-key="nav-career">Carreira</a></li>
                 <li><a href="#contato" data-key="nav-contact-menu">Contato</a></li>
             </ul>
@@ -65,18 +66,24 @@
     </section>
 
     <section id="formacao">
-        <div class="container small">
-            <div class="section-title">
+        <div class="container small text-center">
+            <div class="section-title justify-center">
                 <i class="fas fa-graduation-cap text-emerald"></i>
                 <h2 data-key="edu-title">FORMAÇÃO ACADÊMICA</h2>
             </div>
-            <div class="edu-card no-box">
-                <h3 data-key="edu-1-h">Análise e Desenvolvimento de Sistemas</h3>
-                <p data-key="edu-1-p">Faculdade Impacta | Conclusão prevista: Dezembro/2027</p>
-            </div>
-            <div class="edu-card no-box">
-                <h3 data-key="edu-2-h">Técnico em Programação e Jogos Digitais</h3>
-                <p data-key="edu-2-p">Formação Profissionalizante | 1200h</p>
+            
+            <div class="edu-wrapper">
+                <div class="edu-card-highlight">
+                    <h3 data-key="edu-1-h">Análise e Desenvolvimento de Sistemas</h3>
+                    <p class="school">Faculdade Impacta</p>
+                    <span class="date" data-key="edu-1-p">Conclusão prevista: Dezembro/2027</span>
+                </div>
+
+                <div class="edu-card-highlight">
+                    <h3 data-key="edu-2-h">Técnico em Programação e Jogos Digitais</h3>
+                    <p class="school">Formação Profissionalizante</p>
+                    <span class="date" data-key="edu-2-p">Formação Profissionalizante | 1200h</span>
+                </div>
             </div>
         </div>
     </section>
@@ -117,7 +124,58 @@
         </div>
     </section>
 
-    <section id="experiencia">
+    <section id="meus-projetos">
+        <div class="container">
+            <div class="section-title">
+                <i class="fas fa-code-branch text-emerald"></i>
+                <h2 data-key="proj-title">MEUS PROJETOS</h2>
+            </div>
+            <div class="skills-grid"> 
+                <div class="skill-card">
+                    <h3 data-key="proj-1-h">Moto MC</h3>
+                    <p data-key="proj-1-p">Oficina e Estética de Motos</p>
+                    <a href="https://walissonpatrickhelmer.github.io/moto_mc/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-2-h">Jogo da Velha</h3>
+                    <p data-key="proj-2-p">Interativo com Lógica JS</p>
+                    <a href="https://walissonpatrickhelmer.github.io/Velha-interativo/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-3-h">Cafeteria</h3>
+                    <p data-key="proj-3-p">Design UI para Cafés</p>
+                    <a href="https://walissonpatrickhelmer.github.io/Cafeteria/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-4-h">Academia</h3>
+                    <p data-key="proj-4-p">Site de Serviços Fitness</p>
+                    <a href="https://walissonpatrickhelmer.github.io/Academia/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-5-h">10 Curiosidades Eddie</h3>
+                    <p data-key="proj-5-p">Página Temática Iron Maiden</p>
+                    <a href="https://walissonpatrickhelmer.github.io/10-curiosidades-sobre-eddie/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-6-h">História do Android</h3>
+                    <p data-key="proj-6-p">Evolução do Sistema Mobile</p>
+                    <a href="https://walissonpatrickhelmer.github.io/Site_Historia_android/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-7-h">HTML com Guanabara</h3>
+                    <p data-key="proj-7-p">Estudos de Base e Semântica</p>
+                    <a href="https://walissonpatrickhelmer.github.io/Html_com_guanabara/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+                <div class="skill-card">
+                    <h3 data-key="proj-8-h">Web Currículo</h3>
+                    <p data-key="proj-8-p">Primeira versão digital</p>
+                    <a href="https://walissonpatrickhelmer.github.io/curriculo/" target="_blank" class="btn-project">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="section-dark">
         <div class="container small">
             <div class="section-title">
                 <i class="fas fa-briefcase text-emerald"></i>
@@ -127,15 +185,15 @@
                 <div class="timeline-item no-box">
                     <div class="time-header">
                         <h3>2P Sacolas Personalizadas</h3>
-                        <span data-key="exp-now" style="color: var(--emerald); font-weight: 700;">Atual</span>
+                        <span data-key="exp-now" style="color: var(--emerald); font-weight: 700;"></span>
                     </div>
-                    <p class="role" style="font-weight: 700;" data-key="exp-1-role">CEO / Administrador</p>
+                    <p class="role" style="font-weight: 700;" data-key="exp-1-role">Vendas / Administração / Logística / Compras</p>
                     <p class="desc" data-key="exp-1-desc">Gestão de redes sociais, vendas, equipe e treinamentos. Controle financeiro e compras.</p>
                 </div>
                 <div class="timeline-item no-box">
                     <div class="time-header">
                         <h3>Alma Viva do Brasil</h3>
-                        <span data-key="exp-prev" data-key="exp-label-prev">Anterior</span>
+                        <span data-key="exp-prev" data-key="exp-label-prev"></span>
                     </div>
                     <p class="role" style="font-weight: 700;" data-key="exp-2-role">Telemarketing e Suporte TI</p>
                     <p class="desc" data-key="exp-2-desc">Atendimento técnico e suporte de primeiro nível em infraestrutura.</p>

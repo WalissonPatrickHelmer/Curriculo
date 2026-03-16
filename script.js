@@ -1,4 +1,6 @@
 const langToggle = document.getElementById('lang-toggle');
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 let currentLang = 'pt';
 
 const translations = {
@@ -33,7 +35,17 @@ const translations = {
         "exp-2-role": "Telemarketing e Suporte TI",
         "exp-2-desc": "Atendimento técnico e suporte de primeiro nível em infraestrutura.",
         "foot-h2": "Interessado no meu perfil?",
-        "foot-loc": "Belo Horizonte, MG • CEP: 30690-260"
+        "foot-loc": "Belo Horizonte, MG • CEP: 30690-260",
+        // Tradução dos Projetos
+        "proj-title": "MEUS PROJETOS",
+        "proj-1-h": "Moto MC", "proj-1-p": "Oficina e Estética de Motos",
+        "proj-2-h": "Jogo da Velha", "proj-2-p": "Interativo com Lógica JS",
+        "proj-3-h": "Cafeteria", "proj-3-p": "Design UI para Cafés",
+        "proj-4-h": "Academia", "proj-4-p": "Site de Serviços Fitness",
+        "proj-5-h": "10 Curiosidades Eddie", "proj-5-p": "Página Temática Iron Maiden",
+        "proj-6-h": "História do Android", "proj-6-p": "Evolução do Sistema Mobile",
+        "proj-7-h": "HTML com Guanabara", "proj-7-p": "Estudos de Base e Semântica",
+        "proj-8-h": "Web Currículo", "proj-8-p": "Primeira versão digital"
     },
     en: {
         "nav-about": "About",
@@ -66,13 +78,25 @@ const translations = {
         "exp-2-role": "Telemarketing and IT Support",
         "exp-2-desc": "Technical service and first-level infrastructure support.",
         "foot-h2": "Interested in my profile?",
-        "foot-loc": "Belo Horizonte, Brazil • ZIP: 30690-260"
+        "foot-loc": "Belo Horizonte, Brazil • ZIP: 30690-260",
+        // Project Translations
+        "proj-title": "MY PROJECTS",
+        "proj-1-h": "Moto MC", "proj-1-p": "Motorcycle Detail Shop",
+        "proj-2-h": "Tic-Tac-Toe", "proj-2-p": "Interactive JS Logic",
+        "proj-3-h": "Coffee Shop", "proj-3-p": "UI Design for Cafés",
+        "proj-4-h": "Gym Site", "proj-4-p": "Fitness Services Site",
+        "proj-5-h": "10 Eddie Facts", "proj-5-p": "Iron Maiden Themed Page",
+        "proj-6-h": "Android History", "proj-6-p": "Mobile System Evolution",
+        "proj-7-h": "HTML Studies", "proj-7-p": "Semantics and Base Studies",
+        "proj-8-h": "Web Resume", "proj-8-p": "First digital version"
     }
 };
 
+// Lógica de Idioma
 langToggle.addEventListener('click', () => {
     currentLang = currentLang === 'pt' ? 'en' : 'pt';
     langToggle.innerText = currentLang === 'pt' ? 'EN' : 'PT';
+    
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         if (translations[currentLang][key]) {
@@ -81,9 +105,7 @@ langToggle.addEventListener('click', () => {
     });
 });
 
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
+// Lógica de Tema
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-theme');
     const isLight = body.classList.contains('light-theme');
