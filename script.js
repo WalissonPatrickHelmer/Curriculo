@@ -1,113 +1,297 @@
-const langToggle = document.getElementById('lang-toggle');
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-let currentLang = 'pt';
+/* =========================================
+   1. Variáveis de Tema e Reset
+   ========================================= */
+:root {
+    /* Tema Escuro (Padrão) */
+    --bg-body: #0a0a0c;
+    --bg-card: #14141a;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --emerald: #10b981;
+    --border: rgba(255, 255, 255, 0.1);
+    --nav-bg: #0a0a0c;
+}
 
-const translations = {
-    pt: {
-        "nav-about": "Sobre",
-        "nav-skills": "Habilidades",
-        "nav-career": "Carreira",
-        "nav-edu": "Formação",
-        "nav-contact-menu": "Contato",
-        "hero-badge": "ANÁLISE E DESENVOLVIMENTO DE SISTEMAS",
-        "hero-title": "Walisson Patrick Helmer",
-        "hero-desc": "Estudante de ADS e especialista em gestão. Focado em transição para Desenvolvimento de Software e Suporte em TI.",
-        "btn-cv": "Baixar Currículo",
-        "obj-title": "OBJETIVO PROFISSIONAL",
-        "obj-desc-p": "Estudante de Análise e Desenvolvimento de Sistemas, com experiência em gestão de empresas e equipes, atendimento ao cliente, suporte técnico e vendas.",
-        "obj-quote": "Busco oportunidade de estágio nas áreas de Desenvolvimento de Sistemas ou Suporte em TI, com foco em aplicar meus conhecimentos técnicos, aprimorar minhas habilidades práticas e contribuir para a criação de soluções eficientes.",
-        "edu-title": "FORMAÇÃO ACADÊMICA",
-        "edu-1-h": "Análise e Desenvolvimento de Sistemas",
-        "edu-1-p": "Faculdade Impacta | Conclusão prevista: Dezembro/2027",
-        "edu-2-h": "Técnico em Programação e Jogos Digitais",
-        "edu-2-p": "Formação Profissionalizante | 1200h",
-        "skills-title": "HABILIDADES TÉCNICAS",
-        "skill-1": "Linguagens & Web",
-        "skill-2": "Sistemas & Dados",
-        "skill-4": "Design & IA",
-        "skill-5": "Gestão & Vendas",
-        "exp-title": "EXPERIÊNCIA PROFISSIONAL",
-        "exp-now": "Atual",
-        "exp-label-prev": "Anterior",
-        "exp-1-role": "CEO / Administrador",
-        "exp-1-desc": "Gestão de redes sociais, vendas, equipe e treinamentos. Controle financeiro e compras.",
-        "exp-2-role": "Telemarketing e Suporte TI",
-        "exp-2-desc": "Atendimento técnico e suporte de primeiro nível em infraestrutura.",
-        "foot-h2": "Interessado no meu perfil?",
-        "foot-loc": "Belo Horizonte, MG • CEP: 30690-260",
-        // Tradução dos Projetos
-        "proj-title": "MEUS PROJETOS",
-        "proj-1-h": "Moto MC", "proj-1-p": "Oficina e Estética de Motos",
-        "proj-2-h": "Jogo da Velha", "proj-2-p": "Interativo com Lógica JS",
-        "proj-3-h": "Cafeteria", "proj-3-p": "Design UI para Cafés",
-        "proj-4-h": "Academia", "proj-4-p": "Site de Serviços Fitness",
-        "proj-5-h": "10 Curiosidades Eddie", "proj-5-p": "Página Temática Iron Maiden",
-        "proj-6-h": "História do Android", "proj-6-p": "Evolução do Sistema Mobile",
-        "proj-7-h": "HTML com Guanabara", "proj-7-p": "Estudos de Base e Semântica",
-        "proj-8-h": "Web Currículo", "proj-8-p": "Primeira versão digital"
-    },
-    en: {
-        "nav-about": "About",
-        "nav-skills": "Skills",
-        "nav-career": "Career",
-        "nav-edu": "Education",
-        "nav-contact-menu": "Contact",
-        "hero-badge": "SYSTEMS ANALYSIS AND DEVELOPMENT",
-        "hero-title": "Walisson Patrick Helmer",
-        "hero-desc": "SAD Student and management specialist. Focused on transitioning to Software Development and IT Support.",
-        "btn-cv": "Download CV",
-        "obj-title": "PROFESSIONAL OBJECTIVE",
-        "obj-desc-p": "Systems Analysis and Development student, with experience in business and team management, customer service, technical support, and sales.",
-        "obj-quote": "I am seeking an internship in Software Development or IT Support, focusing on applying my technical knowledge, improving practical skills, and contributing to efficient solutions.",
-        "edu-title": "ACADEMIC BACKGROUND",
-        "edu-1-h": "Systems Analysis and Development",
-        "edu-1-p": "Impacta College | Expected Graduation: December 2027",
-        "edu-2-h": "Programming and Digital Games Technician",
-        "edu-2-p": "Professional Training | 1200h",
-        "skills-title": "TECHNICAL SKILLS",
-        "skill-1": "Languages & Web",
-        "skill-2": "Systems & Data",
-        "skill-4": "Design & AI",
-        "skill-5": "Management & Sales",
-        "exp-title": "PROFESSIONAL EXPERIENCE",
-        "exp-now": "Current",
-        "exp-label-prev": "Previous",
-        "exp-1-role": "CEO / Administrator",
-        "exp-1-desc": "Social media management, sales, team leading, and training. Financial control and purchasing.",
-        "exp-2-role": "Telemarketing and IT Support",
-        "exp-2-desc": "Technical service and first-level infrastructure support.",
-        "foot-h2": "Interested in my profile?",
-        "foot-loc": "Belo Horizonte, Brazil • ZIP: 30690-260",
-        // Project Translations
-        "proj-title": "MY PROJECTS",
-        "proj-1-h": "Moto MC", "proj-1-p": "Motorcycle Detail Shop",
-        "proj-2-h": "Tic-Tac-Toe", "proj-2-p": "Interactive JS Logic",
-        "proj-3-h": "Coffee Shop", "proj-3-p": "UI Design for Cafés",
-        "proj-4-h": "Gym Site", "proj-4-p": "Fitness Services Site",
-        "proj-5-h": "10 Eddie Facts", "proj-5-p": "Iron Maiden Themed Page",
-        "proj-6-h": "Android History", "proj-6-p": "Mobile System Evolution",
-        "proj-7-h": "HTML Studies", "proj-7-p": "Semantics and Base Studies",
-        "proj-8-h": "Web Resume", "proj-8-p": "First digital version"
-    }
-};
+body.light-theme {
+    /* Tema Claro */
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --emerald: #059669;
+    --border: rgba(0, 0, 0, 0.1);
+    --nav-bg: #f8fafc;
+}
 
-// Lógica de Idioma
-langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'pt' ? 'en' : 'pt';
-    langToggle.innerText = currentLang === 'pt' ? 'EN' : 'PT';
-    
-    document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (translations[currentLang][key]) {
-            element.innerText = translations[currentLang][key];
-        }
-    });
-});
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
 
-// Lógica de Tema
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-theme');
-    const isLight = body.classList.contains('light-theme');
-    themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-});
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. Layout Utilitários
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container.small { max-width: 800px; }
+.text-center { text-align: center; }
+
+section { padding: 80px 0; }
+.section-dark { background: var(--bg-card); }
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.section-title h2 { font-size: 1.8rem; font-weight: 700; color: var(--text-main); }
+.section-title i { font-size: 1.8rem; }
+.justify-center { justify-content: center; }
+
+body.light-theme .section-title h2 { color: #000000 !important; }
+
+/* =========================================
+   3. Navegação
+   ========================================= */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo { font-weight: 900; font-size: 1.5rem; color: var(--text-main); }
+.logo span { color: var(--emerald); }
+
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--emerald); }
+
+/* =========================================
+   4. Controles de Tema
+   ========================================= */
+.theme-controls {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1001;
+}
+
+.control-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   5. Hero Section
+   ========================================= */
+.hero { padding: 150px 0 80px; text-align: center; }
+.badge { display: inline-block; padding: 5px 15px; border: 1px solid var(--emerald); color: var(--emerald); border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 900; }
+.hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+
+.btn-primary { background: var(--emerald); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; }
+.btn-secondary { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-main); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+
+body.light-theme .btn-github { background-color: #000000 !important; color: #ffffff !important; border: none; }
+
+/* =========================================
+   6. Habilidades (Tags originais)
+   ========================================= */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; justify-content: center; }
+.tags span { background: rgba(16, 185, 129, 0.1); color: var(--emerald); padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; }
+
+/* =========================================
+   7. Formação Acadêmica (Cartões Destacados)
+   ========================================= */
+.edu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.edu-card-highlight {
+    background: var(--bg-card);
+    border-left: 4px solid var(--emerald);
+    padding: 35px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.edu-card-highlight:hover { transform: scale(1.02); }
+
+.edu-card-highlight h3 {
+    color: var(--emerald);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.edu-card-highlight .school {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.edu-card-highlight .date {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: block;
+}
+
+body.light-theme .edu-card-highlight .school { color: #000000 !important; }
+
+/* =========================================
+   8. Projetos (Grid 4xN e Botões Bottom)
+   ========================================= */
+.projects-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px; 
+    margin-top: 40px; 
+}
+
+/* Card de Projeto com alinhamento flexível */
+.project-card { 
+    background: var(--bg-card); 
+    border: 1px solid var(--border); 
+    padding: 25px; 
+    border-radius: 12px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; /* Garante que o botão fique no fundo */
+    min-height: 300px; /* Altura mínima uniforme */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover { transform: translateY(-5px); border-color: var(--emerald); }
+
+.project-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+.project-card p { color: var(--text-muted); font-size: 0.95rem; flex-grow: 1; /* Ocupa o espaço livre */ }
+
+/* Botão de Acesso do Projeto */
+.btn-project {
+    display: inline-block;
+    margin-top: auto; /* Empurra o botão para a base */
+    padding: 10px 25px;
+    border: 1px solid var(--emerald);
+    color: var(--emerald);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    width: fit-content;
+}
+
+.btn-project:hover {
+    background: var(--emerald);
+    color: white;
+}
+
+/* =========================================
+   9. Experiência e Timeline
+   ========================================= */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.time-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
+.timeline-item h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-main); }
+.timeline-item .role { font-weight: 700; color: var(--emerald); margin-bottom: 5px; }
+.timeline-item .desc { color: var(--text-muted); font-size: 0.95rem; }
+
+body.light-theme .timeline-item h3 { color: #000000 !important; }
+
+/* =========================================
+   10. Rodapé e Contato
+   ========================================= */
+footer { padding: 80px 0; background: var(--bg-card); border-top: 1px solid var(--border); }
+.contact-links { display: flex; justify-content: center; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
+.contact-card { text-decoration: none; color: var(--text-main); padding: 15px 25px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; gap: 10px; transition: all 0.3s; }
+
+.whatsapp:hover { background: #25D366; color: white; border-color: #25D366; }
+.email:hover { background: #EA4335; color: white; border-color: #EA4335; }
+
+/* =========================================
+   11. Responsividade
+   ========================================= */
+@media (min-width: 1024px) {
+    /* Força 4 colunas em desktops */
+    .projects-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 1023px) and (min-width: 650px) {
+    /* Força 2 colunas em tablets */
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Oculta menu em mobile */
+}
+
+@media (max-width: 649px) {
+    /* Força 1 coluna em celulares */
+    .projects-grid { grid-template-columns: 1fr; }
+}
